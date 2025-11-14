@@ -33,6 +33,19 @@ public class Maze
     public void MoveLeft()
     {
         // FILL IN CODE
+        // Get the valid moves for the current position
+        // Format: [left, right, up, down]
+        var validMoves = _mazeMap[(_currX, _currY)];
+        
+        // Check if we can move left (index 0)
+        if (validMoves[0])
+        {
+            _currX--;
+        }
+        else
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
     }
 
     /// <summary>
@@ -42,6 +55,19 @@ public class Maze
     public void MoveRight()
     {
         // FILL IN CODE
+        // Get the valid moves for the current position
+        // Format: [left, right, up, down]
+        var validMoves = _mazeMap[(_currX, _currY)];
+        
+        // Check if we can move right (index 1)
+        if (validMoves[1])
+        {
+            _currX++;
+        }
+        else
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
     }
 
     /// <summary>
@@ -51,6 +77,19 @@ public class Maze
     public void MoveUp()
     {
         // FILL IN CODE
+        // Get the valid moves for the current position
+        // Format: [left, right, up, down]
+        var validMoves = _mazeMap[(_currX, _currY)];
+        
+        // Check if we can move up (index 2)
+        if (validMoves[2])
+        {
+            _currY--;
+        }
+        else
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
     }
 
     /// <summary>
@@ -60,6 +99,19 @@ public class Maze
     public void MoveDown()
     {
         // FILL IN CODE
+        // Get the valid moves for the current position
+        // Format: [left, right, up, down]
+        var validMoves = _mazeMap[(_currX, _currY)];
+        
+        // Check if we can move down (index 3)
+        if (validMoves[3])
+        {
+            _currY++;
+        }
+        else
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
     }
 
     public string GetStatus()
